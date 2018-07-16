@@ -63,3 +63,43 @@ console.log(decode('david'));
 console.log(decode('emmet'));
 console.log(decoded);
 */
+
+// How many days in a month
+/*
+function daysInMonth(month, leapYear) {
+    month = month.toLowerCase();
+    switch(month) {
+        case 'january':
+        case 'march':
+        case 'may':
+        case 'july':
+        case 'august':
+        case 'october':
+        case 'december':
+            return `${month.charAt(0).toUpperCase() + month.slice(1)} has 31 days.`;
+            break;
+        case 'april':
+        case 'june':
+        case 'september':
+        case 'november':
+            return `${month.charAt(0).toUpperCase() + month.slice(1)} has 30 days.`;
+            break;
+        case 'february':
+            if (leapYear) {
+                return 'February has 29 days.';
+            } else {
+                return 'February has 28 days.';
+            }
+            break;
+        default:
+            return 'Must provide a valid month.';
+    }
+}
+
+console.log(daysInMonth('August', false));
+console.log(daysInMonth('August'));
+console.log(daysInMonth('June', true));
+console.log(daysInMonth('February', false));
+console.log(daysInMonth('February', true));
+console.log(daysInMonth('Thinkful', false));
+*/
