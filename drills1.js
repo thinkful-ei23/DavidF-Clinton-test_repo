@@ -3,7 +3,7 @@
 function whoAmI(name, age) {
     let yob= yearOfBirth(age);
     try {
-        if (!name || !age) {
+        if (!name || !age || typeof name !== "string" || typeof age !== 'number') {
             throw new Error('Arguments not valid');
         } else {
             console.log(`Hi, my name is ${name} and I'm ${age} years old`);
@@ -33,5 +33,5 @@ function yearOfBirth(age){
     }
  }
 
-whoAmI('john', -2);
+whoAmI('john', 53);
 yearOfBirth(53);
