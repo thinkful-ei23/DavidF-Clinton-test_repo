@@ -1,10 +1,12 @@
 'use strict';
 
 function whoAmI(name, age) {
-    let yob= yearOfBirth(age);
+    let yob = yearOfBirth(age);
     try {
-        if (!name || !age || typeof name !== "string" || typeof age !== 'number') {
+        if (!name || !age || typeof name !== 'string' || typeof age !== 'number') {
             throw new Error('Arguments not valid');
+        } else if (yob > 2018) {
+            throw new Error('Age can not be negative');
         } else {
             console.log(`Hi, my name is ${name} and I'm ${age} years old`);
             console.log(`I was born in ${yob}`);
@@ -12,26 +14,10 @@ function whoAmI(name, age) {
     } catch (e) {
         console.error(e);
     }
-    // if (yob === !NaN) {
-    //     console.log(`I was born in ${yob}`);
-    // } else {
-    //     console.log('You haven\'t been born');
-    // }
 }
 
 function yearOfBirth(age){
-    let yob = 2018-age;
-    try {
-        if (yob > 2018) {
-            throw new Error('Age can not be negative');
-        } else {
-            return yob;
-        }
-    }
-    catch (e) {
-        console.log(e);
-    }
+    return 2018-age;
  }
 
-whoAmI('john', 53);
-yearOfBirth(53);
+whoAmI('john', 21);
