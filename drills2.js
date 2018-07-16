@@ -103,3 +103,27 @@ console.log(daysInMonth('February', false));
 console.log(daysInMonth('February', true));
 console.log(daysInMonth('Thinkful', false));
 */
+
+//Rock Paper Scissors
+const randomNo = Math.floor(Math.random() * 3) + 1;
+function rockPaperScissors(num) {
+        if (!Number.isInteger(num)) {
+            console.error("Please use a valid whole number");
+        } else if (num > 4 || num < 0) {
+            console.error("Please use a number between 1-3");
+        } else if (num === randomNo) {
+            console.log('It\'s a Tie');
+        } else if ((num === 3 && randomNo === 2) || (num === 2 && randomNo === 1) || (num === 1 && randomNo === 3)) {
+            console.log("Congratulations! You win!");
+        } else if ((num === 3 && randomNo === 1) || (num === 2 && randomNo === 3) || (num === 1 && randomNo === 2)) {
+            console.log("I'm sorry! You lose.");
+        } else {
+            console.log('Somehow it got here.', num, randomNo);
+        }
+    }
+
+rockPaperScissors(1);
+rockPaperScissors(2);
+rockPaperScissors(3);
+rockPaperScissors(6);
+rockPaperScissors(1.8);
