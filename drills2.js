@@ -1,9 +1,14 @@
+//Jedi Name
+/*
 function jediName(firstName, lastName) {
     return lastName.slice(0,3) + firstName.slice(0, 2);
 }
 
 console.log(jediName('Beyonce', 'Knowles'));
+*/
 
+//To infinity...
+/*
 function beyond(num) {
    if (Math.abs(num) === Number.POSITIVE_INFINITY) {
        console.log('And beyond');
@@ -24,3 +29,7 @@ beyond(23);
 beyond(-23);
 beyond(0);
 beyond('rudabega');
+*/
+
+//Cracking the Code
+
